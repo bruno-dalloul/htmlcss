@@ -1,0 +1,83 @@
+
+
+
+
+<ion-content scroll-y="false">
+
+  <div class="background">
+    <div class="logo">
+      <ion-img src="assets/image/img/logonegativo.png" class="logo"></ion-img>
+    </div>
+
+
+    <div class="email">
+
+      <ion-item lines="inset" class="text-select">
+
+        <ion-label position="floating">Cliente</ion-label>
+        <ion-select  [(ngModel)]="valuecliente" ok-text="OK" cancelText="Cancelar" >
+          <ion-select-option *ngFor="let cliente of clientes" value="{{cliente.id_clie}}">{{cliente.nome_cliente}}</ion-select-option>
+        </ion-select>
+
+
+      </ion-item>
+
+
+    </div>
+
+    <div class="email">
+
+      <ion-item lines="inset" class="text-email">
+        <ion-label position="floating">Login</ion-label>
+        <ion-input type="email" [(ngModel)]="login"></ion-input>
+      </ion-item>
+
+
+    </div>
+
+    <div class="password">
+      <ion-item lines="inset" class="text-password">
+
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input clearInput value="" type="password" [(ngModel)]="senha"> </ion-input>
+
+      </ion-item>
+    </div>
+
+    <div id="recovery">
+
+      <ion-label routerLink="/recovery" routerDirection="root">esqueci minha senha</ion-label>
+
+    </div>
+
+    <div class="button">
+      <ion-button expand="block" type="submit" class="button-native" (click)="LogarCliente()">
+        <ion-label>ENTRAR</ion-label>
+      </ion-button>
+    </div>
+
+
+  <!-- 
+    <div id="label">
+
+      <ion-label>Ainda não é um membro?</ion-label>
+
+    </div>
+
+    <div id="sub_label">
+
+      <ion-label routerLink="/cadastro" routerDirection="root">CADASTRE-SE</ion-label>
+
+    </div>
+    -->
+    <div id="sub_label">
+
+      <ion-label routerLink="/criarconta" routerDirection="root">Criar Conta?</ion-label>
+
+    </div>
+
+
+
+  </div> 
+
+</ion-content>
